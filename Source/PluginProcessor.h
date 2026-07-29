@@ -11,7 +11,7 @@ struct PitchShifter
             buf.emplace_back (bufLen, 0.0f);
         writePos = 0;
         phase = 0.0f;
-        window = (float) (0.055 * sampleRate);
+        window = (float) (0.020 * sampleRate);
     }
 
     void setSemitones (float st) { ratio = std::pow (2.0f, st / 12.0f); }
